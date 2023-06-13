@@ -1,0 +1,42 @@
+<div class="col-12 main">
+    <div class="col-6 d-flex flex-column align-items-center justify-content-center form-div">
+        <form #signInForm="ngForm">
+            <h1 id="title">Login</h1>
+            <div style="padding: 10px;" class="alert alert-danger" *ngIf="error">
+                {{error}}
+            </div>
+            <div class="input-feilds form-group">
+                <!-- <label class="icon"><i class="bi bi-person-fill"></i></label> -->
+                <div class="input-group">
+                    <input type="text" (focus)="clear()" name="email" #name="ngModel" [(ngModel)]="user.email"
+                        class="form-control" placeholder="email" required>
+                </div>
+            </div>
+            <div class="input-feilds form-group">
+                <!-- <label class="icon"><i class="bi bi-key-fill"></i></label> -->
+                <div class="input-group">
+                    <input type="password" name="password" [(ngModel)]="user.password" class="form-control"
+                        placeholder="password">
+                </div>
+            </div>
+            <div class= "col-12 d-flex align-items-start forgot-link">
+                <a id="forgot" routerLink="/forgotpassword">Forgot password?</a>
+            </div>
+            <div class="col-12 d-flex align-items-start justify-content-between">
+                <div class="d-flex flex-wrap align-items-start justify-content-start ckech-box">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <p id="desc">Remember Me!</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center form-btn">
+                <button type="button" id="form-btn" (click)="login(signInForm)" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+        <div class="d-flex align-items-center justify-content-center signup-link">
+            <p id="desc">Don't have an account? <a id="terms" routerLink="/signup">Sign up</a></p>
+        </div>
+    </div>
+    <div class="col-6 img-div">
+        <img src="https://raw.githubusercontent.com/Ponneelan/Simple-Registration/main/Client/SignIn/draw1.webp" alt="">
+    </div>
+</div>
