@@ -1,2 +1,39 @@
 <p>home works!</p>
 <button (click)="logout()">logout</button>
+<h2>Bar Chart</h2>
+<div style="display: flex;">
+<figure id="pie">{{count}}</figure>
+
+    <div [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name" />
+        </div>
+        <div>
+            <label for="name">city:</label>
+            <input type="text" id="name" formControlName="city" />
+          </div>
+          <div>
+            <label for="name">Country:</label>
+            <input type="text" id="name" formControlName="country" />
+          </div>
+      
+        <div>
+          <label for="city">City:</label>
+          <p-dropdown formControlName="cityId" [options]="cities" optionLabel="city" placeholder="Select a City"></p-dropdown>
+        </div>
+      
+        <div>
+          <label for="country">Country:</label>
+          <p-dropdown formControlName="countryId" [options]="countries" optionLabel="country" placeholder="Select a City"></p-dropdown>
+        </div>
+      
+        <div>
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" id="phoneNumber" formControlName="phoneNumber" />
+        </div>
+      
+        <button type="submit" (click)="submit()">Submit</button>
+    </div>
+      <div>{{values}}</div>
+</div>

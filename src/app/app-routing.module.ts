@@ -8,6 +8,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 // import { CanActivateFn } from '@angular/router';
 import { authguard } from './auth.guard';
+import { HeatmapComponent } from './heatmap/heatmap.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
 },
   {path:'forgotpassword',component:ForgotPasswordComponent},
   {path:'resetpassword',component:ResetPasswordComponent},
+  {path:'heat',component:HeatmapComponent},
 ];
 
 @NgModule({
